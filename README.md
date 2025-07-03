@@ -88,7 +88,7 @@ The goal is to model and simulate price changes throughout the day and improve l
 Price(t+1) = Price(t) + α × (Occupancy / Capacity)
 
 
-✅ Model 2: Demand-Based Dynamic Pricing
+### ✅ Model 2: Demand-Based Dynamic Pricing
 Weighted demand function:
 
 Normalized occupancy
@@ -102,7 +102,7 @@ Special day indicator
 Vehicle type weight
 
 
-✅ Model 3: Competitive Pricing (Optional)
+### ✅ Model 3: Competitive Pricing (Optional)
 Calculates distance to nearby lots
 
 Adjusts pricing based on competitor pricing strategy
