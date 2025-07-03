@@ -1,96 +1,65 @@
 # Dynamic-Pricing-for-Urban-Parking-Lots
 
 **Capstone Project – Summer Analytics 2025**  
-Hosted by the Consulting & Analytics Club × Pathway
-
----
-
-## 📌 Project Overview
-
-Urban parking lots are a limited yet high-demand resource. Fixed pricing often leads to inefficiencies — overcrowding during peak hours or underutilization during low-demand periods. This project implements a **real-time dynamic pricing engine** to improve utilization and revenue efficiency across 14 simulated urban parking spaces.
-
-The engine adjusts prices based on:
-- Historical occupancy trends
-- Vehicle queue lengths
-- Nearby traffic congestion
-- Special events or holidays
-- Vehicle types (car, bike, truck)
-- Competitor prices based on geographic proximity
-
----
-
-## 🎯 Objective
-
-To build a real-time pricing system using only:
-- `Python`
-- `pandas`, `numpy`
-- `Pathway` (for real-time simulation)
-- `Bokeh` (for visualization)
-
-The goal is to model and simulate price changes throughout the day and improve lot-level efficiency using economic principles and intelligent data processing.
-
----
-
-## ⚙️ Features
-
-- 📈 Demand-based dynamic pricing with configurable weights
-- 🧠 Linear baseline and advanced pricing models
-- 📍 Competitive price adjustment using geospatial distance
-- 🔄 Real-time price updates simulated using Pathway
-- 📊 Interactive real-time pricing visualization with Bokeh
-
----
-
-## 🧪 Data Description
-
-- **14 Parking Lots**
-- **73 Days**, **18 time points per day (8:00 AM to 4:30 PM)**
-- **Features**:
-  - `Latitude`, `Longitude`
-  - `Capacity`, `Occupancy`
-  - `QueueLength`, `TrafficConditionNearby`
-  - `IsSpecialDay`, `VehicleType`
-
----
-
-## 🛠 Technologies Used
-
-| Tool            | Purpose                                    |
-|-----------------|--------------------------------------------|
-| Python          | Programming Language                       |
-| pandas, numpy   | Data processing and feature calculations   |
-| geopy           | Distance calculations for competitive logic|
-| Bokeh           | Real-time plotting and visualization       |
-| Pathway         | Real-time data stream simulation           |
-| Google Colab    | Development environment                    |
-
----
-
-## 📁 Project Structure
-
-📦 urban-parking-pricing/
-
-├── dataset.csv # Input dataset
-
-├── parking_project.ipynb # Main Colab notebook with all models
-
-├── pricing_output.csv # Output prices (optional)
-
-├── README.md # Project documentation
+Hosted by: Consulting & Analytics Club × Pathway
 
 
+📌 Project Overview
+Urban parking spaces are a limited and highly demanded resource. Traditional static pricing leads to inefficiencies — overcrowding during peak hours or underutilization during low-demand periods. This project implements a real-time, intelligent, and demand-sensitive pricing system to optimize parking space utilization and maximize revenue.
 
+Using simulated data for 14 parking lots over 73 days (with time-series steps every 30 minutes), this system adjusts parking prices in real-time based on factors like:
 
-## 🧠 Pricing Models
+Occupancy rates
+Queue length
+Traffic congestion
+Special event indicators
+Vehicle types
+Competitor pricing (geolocation-based)
 
-### ✅ Model 1: Baseline Linear Model
- ```python
-Price(t+1) = Price(t) + α × (Occupancy / Capacity)
- ```
+🧰 Tech Stack Used
+Technology
+Purpose
+Python
+Core programming language
+pandas
+Data manipulation and processing
+numpy
+Numerical operations
+geopy
+Distance calculation for competition
+Bokeh
+Real-time visualization of price trends
+Pathway
+Real-time data ingestion & simulation
+Google Colab
+Development and execution environment
 
-### ✅ Model 2: Demand-Based Dynamic Pricing
- ```
-Weighted demand function:
+🏗️ Architecture Diagram (Mermaid)
+graph TD
+A[Input CSV Dataset (Parking Logs)] --> B[Preprocessing with pandas]
+B --> C[Model 1: Baseline Linear Pricing]
+B --> D[Model 2: Demand-Based Pricing]
+B --> E[Model 3: Competitive Adjustment]
+C --> F[Real-Time Pricing Output]
+D --> F
+E --> F
+F --> G[Pathway Streaming Engine]
+G --> H[Bokeh Visualization (Live Plot)]
+G --> I[Final Output CSV]
+⚙️ System Architecture & Workflow
+Data Loading & Preprocessing
+
+Input data includes latitude, longitude, capacity, occupancy, queue_length, traffic, special_day, and vehicle_type.
+
+Cleaned and sorted by Time and SystemCodeNumber.
+
+Model 1 – Baseline Linear Model
+
+Simple linear increase in price based on occupancy ratio.
+
+Model 2 – Demand-Based Dynamic Model
+
+Price is influenced by:
 
 Normalized occupancy
 
@@ -98,53 +67,101 @@ Queue length
 
 Traffic level
 
-Special day indicator
+Special event indicator
 
 Vehicle type weight
- ```
 
-### ✅ Model 3: Competitive Pricing (Optional)
- ```
-Calculates distance to nearby lots
+Model 3 – Competitive Pricing Model
 
-Adjusts pricing based on competitor pricing strategy
+Uses geopy to calculate distances between lots.
 
-Suggests rerouting if overcapacity
- ```
+Adjusts price if nearby competitors are cheaper or overburdened.
 
+Real-Time Simulation
 
-📊 Real-Time Visualization
-Interactive real-time pricing for selected lots is displayed using Bokeh, simulating live pricing updates with data streaming.
+Pathway streams data time-step-wise (30 min intervals).
 
+Prices are updated and visualized dynamically.
 
-▶️ How to Run
-1. Clone the Repository
- ```
-(https://github.com/guptakeshav12/Dynamic-Pricing-for-Urban-Parking-Lots.git)
-cd Dynamic-Pricing-for-Urban-Parking-Lots
- ```
-2. Install Required Libraries
- ```
-pip install pandas numpy bokeh geopy pathway
- ```
-3. Open the Notebook in Google Colab or Jupyter
- ```
-# In Colab:
-Upload `Dynamic Pricing for Urban Parking Lots.ipynb` and run all cells
- ```
+Visualization
 
-# In Jupyter:
- ```
-jupyter notebook Dynamic Pricing for Urban Parking Lots.ipynb
- ```
- 
-📌 Notes
-All models are implemented from scratch
+Bokeh renders real-time pricing updates on an interactive plot.
 
-No external ML libraries like scikit-learn or TensorFlow were used
+📁 Folder Structure
+bash
+Copy
+Edit
+📦 urban-parking-pricing/
+├── dataset.csv # Input dataset (simulated)
+├── parking_project.ipynb # Main Google Colab notebook
+├── pricing_output.csv # Output file with updated prices (optional)
+├── README.md # Project documentation (this file)
+├── report.pdf # (Optional) Additional report
+🧠 Key Features
+✅ Three dynamic pricing models with increasing complexity
 
-Real-time simulation is done using Pathway's streaming framework
+✅ Real-time data stream handling using Pathway
 
-Prices are constrained between $5 and $20 to remain practical
+✅ Proximity-aware pricing strategy
 
+✅ Interactive real-time plotting via Bokeh
 
+✅ Pure Python implementation — no external ML libraries
+
+📈 How to Run the Project
+Clone the Repository
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/urban-parking-pricing.git
+cd urban-parking-pricing
+Install Required Dependencies
+
+bash
+Copy
+Edit
+pip install pandas numpy geopy bokeh pathway
+Run the Notebook in Google Colab
+
+Open parking_project.ipynb in Google Colab
+
+Execute cells sequentially to:
+
+Load data
+
+Generate pricing predictions
+
+Visualize in real time
+
+📎 Documentation
+📄 README.md – This file
+
+🧠 Model documentation – Inline comments in parking_project.ipynb
+
+📉 Architecture & logic – Mermaid diagram + explanation
+
+📊 Visualization – Bokeh embedded in notebook
+
+📝 report.pdf (Optional) – Deeper insights, evaluation, and rationale
+
+🔓 Repository Access
+🔹 This repository is public
+
+🔹 All scripts and notebooks run without error
+
+🔹 All documentation is self-contained and easy to follow
+
+🔹 No external services are required beyond Colab and GitHub
+
+🙌 Acknowledgements
+Consulting & Analytics Club, IITG
+
+Pathway Team
+
+Summer Analytics 2025 Mentors & Organizers
+
+📬 Contact
+👤 Author: Keshav Gupta
+📧 Email: your.email@example.com
+🔗 GitHub: github.com/yourusername
