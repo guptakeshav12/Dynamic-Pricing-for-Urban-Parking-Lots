@@ -69,6 +69,7 @@ The goal is to model and simulate price changes throughout the day and improve l
 ## 📁 Project Structure
 
 📦 urban-parking-pricing/
+
 ├── dataset.csv # Input dataset
 ├── parking_project.ipynb # Main Colab notebook with all models
 ├── pricing_output.csv # Output prices (optional)
