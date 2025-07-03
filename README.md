@@ -36,17 +36,11 @@ Competitor pricing (geolocation-based)
 | **Google Colab** | Development and execution environment|
 
 🏗️ Architecture Diagram (Mermaid)
+
 graph TD
-A[Input CSV Dataset (Parking Logs)] --> B[Preprocessing with pandas]
-B --> C[Model 1: Baseline Linear Pricing]
-B --> D[Model 2: Demand-Based Pricing]
-B --> E[Model 3: Competitive Adjustment]
-C --> F[Real-Time Pricing Output]
-D --> F
-E --> F
-F --> G[Pathway Streaming Engine]
-G --> H[Bokeh Visualization (Live Plot)]
-G --> I[Final Output CSV]
+
+![image arch](https://github.com/user-attachments/assets/0cd13f1d-ebaf-4a69-a2a3-03c34ea00c10)
+
 
 
 ⚙️ System Architecture & Workflow
@@ -119,6 +113,7 @@ Bokeh renders real-time pricing updates on an interactive plot.
 ✅ Pure Python implementation — no external ML libraries
 
 📈 How to Run the Project
+
 Clone the Repository
 ```
 (https://github.com/guptakeshav12/Dynamic-Pricing-for-Urban-Parking-Lots.git)
