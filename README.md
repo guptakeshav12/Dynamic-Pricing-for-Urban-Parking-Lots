@@ -84,7 +84,7 @@ The goal is to model and simulate price changes throughout the day and improve l
 ## 🧠 Pricing Models
 
 ### ✅ Model 1: Baseline Linear Model
-
+'''python
 Price(t+1) = Price(t) + α × (Occupancy / Capacity)
 
 
