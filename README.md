@@ -9,18 +9,17 @@ Urban parking spaces are a limited and highly demanded resource. Traditional sta
 
 Using simulated data for 14 parking lots over 73 days (with time-series steps every 30 minutes), this system adjusts parking prices in real-time based on factors like:
 
+     Occupancy rates
 
-Occupancy rates
+     Queue length
 
-Queue length
+     Traffic congestion
 
-Traffic congestion
+     Special event indicators
 
-Special event indicators
+     Vehicle types
 
-Vehicle types
-
-Competitor pricing (geolocation-based)
+     Competitor pricing (geolocation-based)
 
 
 🧰 Tech Stack Used
@@ -43,6 +42,9 @@ graph TD
 
 
 
+
+
+
 ⚙️ System Architecture & Workflow
 
 1. Data Loading & Preprocessing
@@ -53,51 +55,53 @@ graph TD
 
 Model 2 – Baseline Linear Model
 
-Simple linear increase in price based on occupancy ratio.
+     Simple linear increase in price based on occupancy ratio.
 
 Model 3 – Demand-Based Dynamic Model
 
-Price is influenced by:
+     Price is influenced by:
 
-Normalized occupancy
+     Normalized occupancy
 
-Queue length
+     Queue length
 
-Traffic level
+     Traffic level
 
-Special event indicator
+     Special event indicator
 
-Vehicle type weight
+     Vehicle type weight
 
 Model 4 – Competitive Pricing Model
 
-Uses geopy to calculate distances between lots.
+     Uses geopy to calculate distances between lots.
 
-Adjusts price if nearby competitors are cheaper or overburdened.
+     Adjusts price if nearby competitors are cheaper or overburdened.
 
-Real-Time Simulation
+     Real-Time Simulation
 
-Pathway streams data time-step-wise (30 min intervals).
+     Pathway streams data time-step-wise (30 min intervals).
 
-Prices are updated and visualized dynamically.
+     Prices are updated and visualized dynamically.
 
-Visualization
+     Visualization
 
-Bokeh renders real-time pricing updates on an interactive plot.
+     Bokeh renders real-time pricing updates on an interactive plot.
+
+
 
 📁 Folder Structure
 
 📦 urban-parking-pricing/
 
-├── dataset.csv # Input dataset (simulated)
+     ├── dataset.csv # Input dataset (simulated)
 
-├── parking_project.ipynb # Main Google Colab notebook
+     ├── parking_project.ipynb # Main Google Colab notebook
 
-├── pricing_output.csv # Output file with updated prices (optional)
+     ├── pricing_output.csv # Output file with updated prices (optional)
 
-├── README.md # Project documentation (this file)
+     ├── README.md # Project documentation (this file)
 
-├── report.pdf # (Optional) Additional report
+     ├── report.pdf # (Optional) Additional report
 
 
 🧠 Key Features
@@ -129,11 +133,11 @@ Open Dynamic Pricing for Urban Parking Lots.ipynb in Google Colab
 ```
 Execute cells sequentially to:
 
-Load data
+     Load data
 
-Generate pricing predictions
+     Generate pricing predictions
 
-Visualize in real time
+     Visualize in real time
 
 📎 Documentation
 
@@ -173,4 +177,4 @@ Summer Analytics 2025 Mentors & Organizers
 
 📧 Email:Keshavksh12@gmail.com
 
-🔗 GitHub: github.com/yourusername
+🔗 GitHub:(https://github.com/guptakeshav12)
