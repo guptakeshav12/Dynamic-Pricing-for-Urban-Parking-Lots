@@ -120,8 +120,8 @@ Interactive real-time pricing for selected lots is displayed using Bokeh, simula
 ▶️ How to Run
 1. Clone the Repository
  ```
-git clone https://github.com/yourusername/urban-parking-pricing.git
-cd urban-parking-pricing
+(https://github.com/guptakeshav12/Dynamic-Pricing-for-Urban-Parking-Lots.git)
+cd Dynamic-Pricing-for-Urban-Parking-Lots
  ```
 2. Install Required Libraries
  ```
@@ -130,12 +130,12 @@ pip install pandas numpy bokeh geopy pathway
 3. Open the Notebook in Google Colab or Jupyter
  ```
 # In Colab:
-Upload `parking_project.ipynb` and run all cells
+Upload `Dynamic Pricing for Urban Parking Lots.ipynb` and run all cells
  ```
 
 # In Jupyter:
  ```
-jupyter notebook parking_project.ipynb
+jupyter notebook Dynamic Pricing for Urban Parking Lots.ipynb
  ```
  
 📌 Notes
