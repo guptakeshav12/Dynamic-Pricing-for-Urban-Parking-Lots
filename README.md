@@ -9,30 +9,31 @@ Urban parking spaces are a limited and highly demanded resource. Traditional sta
 
 Using simulated data for 14 parking lots over 73 days (with time-series steps every 30 minutes), this system adjusts parking prices in real-time based on factors like:
 
+
 Occupancy rates
+
 Queue length
+
 Traffic congestion
+
 Special event indicators
+
 Vehicle types
+
 Competitor pricing (geolocation-based)
 
+
 🧰 Tech Stack Used
-Technology
-Purpose
-Python
-Core programming language
-pandas
-Data manipulation and processing
-numpy
-Numerical operations
-geopy
-Distance calculation for competition
-Bokeh
-Real-time visualization of price trends
-Pathway
-Real-time data ingestion & simulation
-Google Colab
-Development and execution environment
+
+| Technology     | Purpose                               |
+|----------------|----------------------------------------|
+| **Python**     | Core programming language              |
+| **pandas**     | Data manipulation and processing       |
+| **numpy**      | Numerical operations                   |
+| **geopy**      | Distance calculation for competition   |
+| **Bokeh**      | Real-time visualization of price trends|
+| **Pathway**    | Real-time data ingestion & simulation  |
+| **Google Colab** | Development and execution environment|
 
 🏗️ Architecture Diagram (Mermaid)
 graph TD
@@ -49,17 +50,18 @@ G --> I[Final Output CSV]
 
 
 ⚙️ System Architecture & Workflow
-Data Loading & Preprocessing
 
-Input data includes latitude, longitude, capacity, occupancy, queue_length, traffic, special_day, and vehicle_type.
+1. Data Loading & Preprocessing
 
-Cleaned and sorted by Time and SystemCodeNumber.
+     Input data includes latitude, longitude, capacity, occupancy, queue_length, traffic, special_day, and vehicle_type.
 
-Model 1 – Baseline Linear Model
+     Cleaned and sorted by Time and SystemCodeNumber.
+
+Model 2 – Baseline Linear Model
 
 Simple linear increase in price based on occupancy ratio.
 
-Model 2 – Demand-Based Dynamic Model
+Model 3 – Demand-Based Dynamic Model
 
 Price is influenced by:
 
@@ -73,7 +75,7 @@ Special event indicator
 
 Vehicle type weight
 
-Model 3 – Competitive Pricing Model
+Model 4 – Competitive Pricing Model
 
 Uses geopy to calculate distances between lots.
 
@@ -92,14 +94,20 @@ Bokeh renders real-time pricing updates on an interactive plot.
 📁 Folder Structure
 
 📦 urban-parking-pricing/
+
 ├── dataset.csv # Input dataset (simulated)
+
 ├── parking_project.ipynb # Main Google Colab notebook
+
 ├── pricing_output.csv # Output file with updated prices (optional)
+
 ├── README.md # Project documentation (this file)
+
 ├── report.pdf # (Optional) Additional report
 
 
 🧠 Key Features
+
 ✅ Three dynamic pricing models with increasing complexity
 
 ✅ Real-time data stream handling using Pathway
@@ -133,6 +141,7 @@ Generate pricing predictions
 Visualize in real time
 
 📎 Documentation
+
 📄 README.md – This file
 
 🧠 Model documentation – Inline comments in parking_project.ipynb
@@ -143,7 +152,10 @@ Visualize in real time
 
 📝 report.pdf (Optional) – Deeper insights, evaluation, and rationale
 
+
+
 🔓 Repository Access
+
 🔹 This repository is public
 
 🔹 All scripts and notebooks run without error
@@ -153,6 +165,7 @@ Visualize in real time
 🔹 No external services are required beyond Colab and GitHub
 
 🙌 Acknowledgements
+
 Consulting & Analytics Club, IITG
 
 Pathway Team
@@ -160,6 +173,9 @@ Pathway Team
 Summer Analytics 2025 Mentors & Organizers
 
 📬 Contact
+
 👤 Author: Keshav Gupta
-📧 Email: your.email@example.com
+
+📧 Email:Keshavksh12@gmail.com
+
 🔗 GitHub: github.com/yourusername
