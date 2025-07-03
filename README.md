@@ -106,15 +106,15 @@ Model 4 – Competitive Pricing Model
 
 🧠 Key Features
 
-✅ Three dynamic pricing models with increasing complexity
+     ✅ Three dynamic pricing models with increasing complexity
 
-✅ Real-time data stream handling using Pathway
+     ✅ Real-time data stream handling using Pathway
 
-✅ Proximity-aware pricing strategy
+     ✅ Proximity-aware pricing strategy
 
-✅ Interactive real-time plotting via Bokeh
+     ✅ Interactive real-time plotting via Bokeh
 
-✅ Pure Python implementation — no external ML libraries
+     ✅ Pure Python implementation — no external ML libraries
 
 📈 How to Run the Project
 
@@ -139,37 +139,38 @@ Execute cells sequentially to:
 
      Visualize in real time
 
+
 📎 Documentation
 
-📄 README.md – This file
+     📄 README.md – This file
 
-🧠 Model documentation – Inline comments in parking_project.ipynb
+     🧠 Model documentation – Inline comments in parking_project.ipynb
 
-📉 Architecture & logic – Mermaid diagram + explanation
+     📉 Architecture & logic – Mermaid diagram + explanation
 
-📊 Visualization – Bokeh embedded in notebook
+     📊 Visualization – Bokeh embedded in notebook
 
-📝 report.pdf (Optional) – Deeper insights, evaluation, and rationale
+     📝 report.pdf (Optional) – Deeper insights, evaluation, and rationale
 
 
 
 🔓 Repository Access
 
-🔹 This repository is public
+     🔹 This repository is public
 
-🔹 All scripts and notebooks run without error
+     🔹 All scripts and notebooks run without error
 
-🔹 All documentation is self-contained and easy to follow
+     🔹 All documentation is self-contained and easy to follow
 
-🔹 No external services are required beyond Colab and GitHub
+     🔹 No external services are required beyond Colab and GitHub
 
 🙌 Acknowledgements
 
-Consulting & Analytics Club, IITG
+     Consulting & Analytics Club, IITG
 
-Pathway Team
+     Pathway Team
 
-Summer Analytics 2025 Mentors & Organizers
+     Summer Analytics 2025 Mentors & Organizers
 
 📬 Contact
 
