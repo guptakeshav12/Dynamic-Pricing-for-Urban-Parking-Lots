@@ -46,6 +46,8 @@ E --> F
 F --> G[Pathway Streaming Engine]
 G --> H[Bokeh Visualization (Live Plot)]
 G --> I[Final Output CSV]
+
+
 ⚙️ System Architecture & Workflow
 Data Loading & Preprocessing
 
@@ -88,15 +90,15 @@ Visualization
 Bokeh renders real-time pricing updates on an interactive plot.
 
 📁 Folder Structure
-bash
-Copy
-Edit
+
 📦 urban-parking-pricing/
 ├── dataset.csv # Input dataset (simulated)
 ├── parking_project.ipynb # Main Google Colab notebook
 ├── pricing_output.csv # Output file with updated prices (optional)
 ├── README.md # Project documentation (this file)
 ├── report.pdf # (Optional) Additional report
+
+
 🧠 Key Features
 ✅ Three dynamic pricing models with increasing complexity
 
@@ -110,22 +112,18 @@ Edit
 
 📈 How to Run the Project
 Clone the Repository
-
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/urban-parking-pricing.git
-cd urban-parking-pricing
+```
+(https://github.com/guptakeshav12/Dynamic-Pricing-for-Urban-Parking-Lots.git)
+cd Dynamic-Pricing-for-Urban-Parking-Lots
+```
 Install Required Dependencies
-
-bash
-Copy
-Edit
+```
 pip install pandas numpy geopy bokeh pathway
+```
 Run the Notebook in Google Colab
-
-Open parking_project.ipynb in Google Colab
-
+```
+Open Dynamic Pricing for Urban Parking Lots.ipynb in Google Colab
+```
 Execute cells sequentially to:
 
 Load data
