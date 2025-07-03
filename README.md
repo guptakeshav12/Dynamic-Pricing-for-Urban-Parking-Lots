@@ -134,7 +134,8 @@ Upload `parking_project.ipynb` and run all cells
  ```
 # In Jupyter:
 jupyter notebook parking_project.ipynb
- ```
+
+ 
 📌 Notes
 All models are implemented from scratch
 
