@@ -84,11 +84,12 @@ The goal is to model and simulate price changes throughout the day and improve l
 ## 🧠 Pricing Models
 
 ### ✅ Model 1: Baseline Linear Model
-'''python
+ ```python
 Price(t+1) = Price(t) + α × (Occupancy / Capacity)
-
+ ```
 
 ### ✅ Model 2: Demand-Based Dynamic Pricing
+ ```
 Weighted demand function:
 
 Normalized occupancy
@@ -100,15 +101,16 @@ Traffic level
 Special day indicator
 
 Vehicle type weight
-
+ ```
 
 ### ✅ Model 3: Competitive Pricing (Optional)
+ ```
 Calculates distance to nearby lots
 
 Adjusts pricing based on competitor pricing strategy
 
 Suggests rerouting if overcapacity
-
+ ```
 
 
 📊 Real-Time Visualization
@@ -117,20 +119,22 @@ Interactive real-time pricing for selected lots is displayed using Bokeh, simula
 
 ▶️ How to Run
 1. Clone the Repository
-
+ ```
 git clone https://github.com/yourusername/urban-parking-pricing.git
 cd urban-parking-pricing
+ ```
 2. Install Required Libraries
-
+ ```
 pip install pandas numpy bokeh geopy pathway
-
+ ```
 3. Open the Notebook in Google Colab or Jupyter
-
+ ```
 # In Colab:
 Upload `parking_project.ipynb` and run all cells
-
+ ```
 # In Jupyter:
 jupyter notebook parking_project.ipynb
+ ```
 📌 Notes
 All models are implemented from scratch
 
